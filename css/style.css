@@ -10,7 +10,11 @@
 
 @font-face {
     font-family: "im";
-    src: url("../fonts/Inter-Medium.otf");
+    src: url("../fonts/Inter-Medium.ttf");
+}
+@font-face {
+    font-family: "il";
+    src: url("../fonts/Inter-Light.ttf");
 }
 
 html {
@@ -54,6 +58,9 @@ ul {
 }
 
 .menu {
+    font-family: 'im';
+    font-weight: 400;
+    font-size: 16px;
     position: absolute;
     padding: 0px 0 50px;
     top: 0;
@@ -63,20 +70,68 @@ ul {
 .menu__list {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .menu__list-item {
-    padding: 0 13px;
+    padding: 0 40px;
 }
 
-.menu__list-link {
+.logo__img {
+    margin-top: 15px;
+}
+/* .menu__list-link {
     font-size: 36px;
     line-height: 42px;  
-}
+} */
 
 .menu__list-item:hover, .menu__list-link--active {
     color: #85CCDC;
     text-decoration: underline;
+}
+
+.menu__btn {
+    display: none;
+}
+
+.download__btn {
+    /* text-transform: uppercase; */
+    color: #FEFEFE;
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 16px 36px 15px;
+    background-color: #9999FF;
+    /* margin-top: 50px; */
+    font-family: 'im';
+    font-weight: 400;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    line-height: 19px;
+    transition: all .3s ;
+    border-radius: 30px;
+}
+
+.main_text_1 {
+    font-family: 'il';
+    letter-spacing: 0px;
+    font-size: 18px;
+    width: 227px;
+    position: absolute;
+    right: 30%;
+    /* position: absolute; */
+    top: 142px;
+    line-height: 25px;
+}
+
+.main_text_2 {
+    font-family: 'ms';
+    font-size: 80px;
+    width: 890px;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    line-height: 100px;
 }
 
 .section-page {
@@ -361,4 +416,26 @@ ul {
     margin-top: 20px;
 }
 
+@media (max-width: 1245px) {
+    .menu__list-item {
+        padding: 0px 30px;
+    }
+}
 
+@media (max-width: 1155px) {
+    .menu__list-item {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 1132px) {
+    .menu__list-item {
+        padding: 0px 10px;
+    }
+}
+
+@media (max-width: 1132px) {
+    .menu__list-item {
+        padding: 0px 10px;
+    }
+}
