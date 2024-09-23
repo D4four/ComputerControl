@@ -416,6 +416,20 @@ ul {
     margin-top: 20px;
 }
 
+.feedback_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.feedback_list-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 3px solid #fafafa;
+    border-radius: 50px;
+}
+
 @media (max-width: 1245px) {
     .menu__list-item {
         padding: 0px 30px;
