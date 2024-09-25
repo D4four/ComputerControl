@@ -239,13 +239,13 @@ ul {
 }
 
 .trynow__inner {
-    
+    margin-bottom: -100px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .trynow__images {
-    width: 50%;
+    width: 700px;
 }
 
 .trynow__form {
@@ -254,11 +254,11 @@ ul {
 }
 
 .trynow__title {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    margin-bottom: 5px;
+    font-family: 'ms';
+    /* font-weight: 500; */
+    font-size: 68px;
+    line-height: 5rem;
+    margin: 5px 0;
 }
 
 .trynow__text {
@@ -268,19 +268,19 @@ ul {
 .trynow__btn {
     text-transform: uppercase;
     color: #FEFEFE;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     display: inline-block;
     padding: 16px 36px 15px;
     background-color: #9999FF;
     margin-top: 50px;
-    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     cursor: pointer;
     outline: none;
     font-size: 16px;
     line-height: 19px;
     transition: all .3s ;
-    /* border-radius: 10%; */
+    border-radius: 50px;
+    margin-bottom: 100px;
 }
 
 .trynow_list {
@@ -307,7 +307,7 @@ ul {
 }
 
 .feedback__item {
-    background-color: #333333;
+    /* background-color: #333333; */
     height: 450px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -316,31 +316,57 @@ ul {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     border-radius: 10%;
+    padding: 10px;
+    padding-top: 35%;
+}
+
+.feedback__item-title {
+    font-family: 'ib';
+    margin-bottom: 3px;
 }
 
 .feedback__item-subtitle {
     font-size: 14px;
+    line-height: 15px;
+    margin-top: 0;
 }
 
+.feedback_img {
+    position: absolute;
+    left: -5%;
+    top: 15%;
+    border-radius: 100px;
+}
+
+#feedback_img_second {
+    margin-top: 100px;
+}
+
+#feedback_img_third {
+    margin-top: 200px;
+}
 /* TARIFF TARIFF TARIFF TARIFF TARIFF */
 
 /* FAQ FAQ FAQ FAQ FAQ */
 
 
 .newlevel {
+    background-color: #3B3B7D;
+    border-radius: 50px;
     padding: 100px 0;
+    color: #FAFAFA;
 }
 
 .newlevel__inner {
+    margin-bottom: -100px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .newlevel__images {
-    width: 50%;
+    width: 700px;
 }
 
 .newlevel__form {
@@ -349,11 +375,11 @@ ul {
 }
 
 .newlevel__title {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    margin-bottom: 5px;
+    font-family: 'ms';
+    /* font-weight: 500; */
+    font-size: 68px;
+    line-height: 5rem;
+    margin: 5px 0;
 }
 
 .newlevel__text {
@@ -362,20 +388,20 @@ ul {
 
 .newlevel__btn {
     text-transform: uppercase;
-    color: #FEFEFE;
-    border: 1px solid transparent;
+    color: #0D0D0D;
+    /* border: 1px solid transparent; */
     display: inline-block;
     padding: 16px 36px 15px;
-    background-color: #9999FF;
+    background-color: #FAFAFA;
     margin-top: 50px;
-    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     cursor: pointer;
     outline: none;
     font-size: 16px;
     line-height: 19px;
     transition: all .3s ;
-    /* border-radius: 10%; */
+    border-radius: 50px;
+    margin-bottom: 100px;
 }
 
 .newlevel_list {
