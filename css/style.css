@@ -12,6 +12,7 @@
     font-family: "im";
     src: url("../fonts/Inter-Medium.ttf");
 }
+
 @font-face {
     font-family: "il";
     src: url("../fonts/Inter-Light.ttf");
@@ -22,7 +23,9 @@ html {
     scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -98,7 +101,8 @@ ul {
     padding: 0 40px;
 }
 
-.menu__list-item:hover, .menu__list-link--active {
+.menu__list-item:hover,
+.menu__list-link--active {
     color: #FAFAFA;
     text-decoration: underline;
 }
@@ -117,7 +121,7 @@ ul {
     outline: none;
     font-size: 16px;
     line-height: 19px;
-    transition: all .3s ;
+    transition: all .3s;
     border-radius: 30px;
 }
 
@@ -284,7 +288,7 @@ ul {
     outline: none;
     font-size: 16px;
     line-height: 19px;
-    transition: all .3s ;
+    transition: all .3s;
     border-radius: 50px;
     margin-bottom: 100px;
 }
@@ -353,6 +357,7 @@ ul {
 #feedback_img_third {
     margin-top: 200px;
 }
+
 /* TARIFF TARIFF TARIFF TARIFF TARIFF */
 
 /* FAQ FAQ FAQ FAQ FAQ */
@@ -405,7 +410,7 @@ ul {
     outline: none;
     font-size: 16px;
     line-height: 19px;
-    transition: all .3s ;
+    transition: all .3s;
     border-radius: 50px;
     margin-bottom: 100px;
 }
@@ -471,7 +476,7 @@ ul {
     outline: none;
     font-size: 16px;
     line-height: 19px;
-    transition: all .3s ;
+    transition: all .3s;
     /* border-radius: 10%; */
 }
 
@@ -512,20 +517,17 @@ ul {
     border-radius: 50px;
 }
 
-.accordion__item.active 
-.accordion__content {
+.accordion__item.active .accordion__content {
     display: block;
 
 }
 
-.accordion__item.active 
-.accordion__header:after {
+.accordion__item.active .accordion__header:after {
     display: none;
 }
 
-.accordion__item.active 
-.accordion__header::before {
-    top:100%
+.accordion__item.active .accordion__header::before {
+    top: 100%
 }
 
 
@@ -576,7 +578,7 @@ ul {
 }
 
 .accordion__content {
-    display: none; 
+    display: none;
 
     padding: 15px 20px;
     font-size: 15px;
@@ -613,7 +615,8 @@ ul {
     border-radius: 50px;
 }
 
-#card_1, #card_3 {
+#card_1,
+#card_3 {
     background-color: #333333;
 }
 
@@ -661,13 +664,13 @@ ul {
 }
 
 .price-month {
-    
+
     font-size: 68px;
     margin: 10px 0;
 }
 
 .price-year {
-    font-family: "il" !important; 
+    font-family: "il" !important;
     font-size: 24px;
     margin: 10px 0;
     opacity: 0.8;
@@ -708,6 +711,7 @@ ul {
     padding: 15px 175px;
     /* margin-top: 20px; */
 }
+
 .help {
     font-family: 'il';
     font-size: 24px;
@@ -763,6 +767,7 @@ ul {
     .main_text {
         bottom: 400px;
     }
+
     .submain_text {
         font-family: 'il';
         letter-spacing: 0px;
@@ -812,22 +817,42 @@ ul {
 
 @media (max-width: 980px) {
     .menu {
+        overflow-x: hidden;
         padding: 0;
         text-align: center;
-        /* background: linear-gradient(180deg, #210979 0%, #0026a5 10%, rgba(32, 31, 33, 0) 86.33%); */
-    }   
+        /* background: linear-gradient(180deg, #210979 0%, #0026a5 10%, rgba(32, 31, 33, 0) 86.33%);  */
+    }
 
     .menu__list {
         /* display: none; */
-        display: block;
-        padding: 100px 0 50px;
+        
+        opacity: 0;
+        visibility: hidden;
         transform: translateX(100%);
-        transition: all .3s;
+        /* transition: opacity 0.3s, transform 0.3s, visibility 0s 0.3s; */
+        padding: 100px 0 50px;
+
+    }
+
+    .menu__list::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(10px);
+        opacity: 0.9;
+        z-index: -1;
+        background: linear-gradient(180deg, rgb(13, 13, 13), rgb(22, 22, 36));
     }
 
     .menu__list.menu__list--active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
         transform: translateX(0);
-        padding: 100px 0 50px;
+        transition: opacity 0.3s, transform 0.3s;
     }
 
     .menu__list-link {
@@ -863,13 +888,14 @@ ul {
         height: 3px;
     }
 
-    .menu__btn::after, .menu__btn::before {
+    .menu__btn::after,
+    .menu__btn::before {
         content: "";
         width: 100%;
         height: 3px;
         background-color: #fff;
         position: absolute;
-    } 
+    }
 
     .menu__btn::after {
         bottom: 0;
@@ -880,4 +906,124 @@ ul {
         top: 0;
         left: 0;
     }
+}
+
+@media (max-width: 980px) {
+    .main_text {
+        bottom: 550px;
+    }   
+}
+
+@media (max-width: 860px) {
+    .main_text {
+        font-family: 'ms';
+        font-size: 30px;
+        width: 345px;
+        position: absolute;
+        bottom: 585px;
+        left: 60px;
+        line-height: 40px;
+    }   
+    .submain_text {
+        right: 25%;
+    }
+}
+
+@media (max-width: 782px) {
+    .main_text {
+        bottom: 615px;
+    }   
+}
+
+@media (max-width: 725px) {
+    .main_text {
+        bottom: 625px;
+    }   
+}
+
+@media (max-width: 700px) {
+    .main_text {
+        bottom: 655px;
+    }   
+}
+
+@media (max-width: 640px) {
+    .main_text {
+        bottom: 690px;
+    }   
+    .submain_text {
+        display: none;
+    }
+}
+
+@media (max-width: 580px) {
+    .main_text {
+        bottom: 720px;
+    }   
+
+}
+
+@media (max-width: 532px) {
+    .main_text {
+        font-family: 'ms';
+        font-size: 24px;
+        width: 282px;
+        position: absolute;
+        bottom: 735px;
+        left: 60px;
+        line-height: 32px;
+    }   
+
+}
+
+@media (max-width: 524px) {
+    .main_text {
+        font-family: 'ms';
+        font-size: 24px;
+        width: 282px;
+        position: absolute;
+        bottom: 745px;
+        left: 50px;
+        line-height: 32px;
+    }   
+
+}
+
+@media (max-width: 485px) {
+    .main_text {
+        font-family: 'ms';
+        font-size: 20px;
+        width: 230px;
+        position: absolute;
+        bottom: 770px;
+        left: 50px;
+        line-height: 25px;
+    }   
+
+}
+
+@media (max-width: 450px) {
+    .main_text {
+        font-family: 'ms';
+        font-size: 20px;
+        width: 230px;
+        position: absolute;
+        bottom: 792px;
+        left: 50px;
+        line-height: 25px;
+    }   
+
+}
+
+@media (max-width: 405px) {
+    .main_text {
+        font-family: 'ms';
+        font-size: 16px;
+        width: 186px;
+        position: absolute;
+        bottom: 816px;
+        left: 50px;
+        line-height: 21px;
+    }   
+
 }
