@@ -1529,4 +1529,7 @@ ul {
     .advantages__item-title {
         font-size: 20px;
     }
+    .help_text {
+        font-size: 9px;
+    }
 }
